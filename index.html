@@ -252,7 +252,7 @@ function rollDiameter(yards, thickness) {
 
 function dimsStr(radius, length) {
   if (!radius) return null;
-  return `${fmt1(radius)}" dia × ${fmt1(length)}" long`;
+  return `${fmt1(radius)}" W × ${fmt1(radius)}" H × ${fmt1(length)}" L`;
 }
 
 function calculate() {
@@ -317,7 +317,7 @@ function calculate() {
   out.innerHTML = `
     <div class="results-title">Output — ${f.name}</div>
     <div class="result-row"><span class="result-label">Est. Total Weight</span><span class="result-value big">${totalWt} lbs</span></div>
-    <div class="result-row"><span class="result-label">Dims per Roll</span><span class="result-value teal">${dimsOutput}</span></div>
+    <div class="result-row"><span class="result-label">W × H × L (inches)</span><span class="result-value teal">${dimsOutput}</span></div>
     <div class="result-row"><span class="result-label">Avg Roll Size</span><span class="result-value orange">${f.avgDisplay} yds</span></div>
     <div class="result-row"><span class="result-label">lbs per Yard</span><span class="result-value" style="font-size:16px">${f.lbs} lbs/yd</span></div>
     ${multiWarn}${charmWarn}`;
